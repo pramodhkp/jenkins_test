@@ -6,7 +6,6 @@ pipeline {
     }
     environment {
         ROS1_SOURCE_PATH = "/opt/ros/melodic/setup.bash"
-        ROS1_SOURCE_PATH1 = "/opt/ros/melodic/setup.bash"
     }
     stages {
         stage('Test Parallel') {
