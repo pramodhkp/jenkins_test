@@ -17,7 +17,7 @@ pipeline {
     }
     post {
         failure {
-            emailext body: 'test', recipientProviders: [developers()], subject: 'Build Failed ${env.BUILD_URL}'
+            slackSend "Build failed - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
         }
     }
 }
