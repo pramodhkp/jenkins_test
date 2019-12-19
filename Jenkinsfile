@@ -6,7 +6,6 @@ pipeline {
     }
     environment {
         ROS1_SOURCE_PATH = "/opt/ros/melodic/setup.bash"
-        ROS1_WS_PATH = "/home/jenkins/catkin_ws"
     }
     stages {
         stage('Test Parallel') {
