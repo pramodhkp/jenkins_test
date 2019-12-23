@@ -16,7 +16,7 @@ pipeline {
     }
     post {
         failure {
-            slackSend notifyCommitters: true, message: "Build failed - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>) <@pramodhkp>"
+            emailext body: '$DEFAULT_CONTENT', recipientProviders: [developers()], subject: '$DEFAULT_SUBJECT'
         }
     }
 }
