@@ -11,13 +11,13 @@ pipeline {
     stages {
         stage('Test Parallel') {
            steps {
+               emailext body: '$DEFAULT_CONTENT', recipientProviders: [developers()], subject: '$DEFAULT_SUBJECT'
                sh label: 'test', script: '''exit -1'''
            }
         }
     }
     post {
         failure {
-            emailext body: '$DEFAULT_CONTENT', recipientProviders: [developers()], subject: '$DEFAULT_SUBJECT'
         }
     }
 }
