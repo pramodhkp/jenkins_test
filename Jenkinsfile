@@ -1,6 +1,7 @@
 pipeline {
-    agent  any
-       
+    agent {
+	label 'jenkins-sootballs-melodic-ci'
+    }
     options {
         disableConcurrentBuilds()
     }
