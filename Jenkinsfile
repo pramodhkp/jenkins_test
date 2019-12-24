@@ -6,7 +6,7 @@ pipeline {
         disableConcurrentBuilds()
     }
     environment {
-        ROS1_SOURCE_PATH = "/opt/ros/melodic/setu.bash"
+        ROS1_SOURCE_PATH = "/opt/ros/melodic/setup.bash"
     }
     stages {
         stage('Test Parallel') {
